@@ -5,9 +5,9 @@ function Header () {
 
   return (
     <header>
-      <Link to ='/'>
+    
         <h1>Noteful</h1>
-      </Link>      
+           
     </header>
 
   )

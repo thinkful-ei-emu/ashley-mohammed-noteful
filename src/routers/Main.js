@@ -1,16 +1,17 @@
 import React from 'react'
-import {Route} from 'react-router-dom';
-import Header from '../components/Header';
-class Main extends React.Component (){
-    render(){
-        return(
-            <main>
-                            <Sidebar folders= {this.state.store.folders}/>
-            <NoteList notes= {this.state.store.notes}/>
-            </main>
+import './Main.css'
 
+import Sidebar from '../components/Sidebar';
+import NoteList from '../components/NoteList';
+function Main (props){
+   
+        return(
+            <main  className="flex-container">
+           
+            <NoteList notes= {props.notes}/>
+            </main>
         )
-    }
+    
 
 }
 export default Main;
