@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/Header'
+import NoteList from './components/NoteList'
+import Sidebar from './components/Sidebar'
 import './App.css';
+import STORE from './components/Store'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      store: STORE
+    
+    };
+  }
+ 
+ 
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <div className="flex-container">
+        <Sidebar folders= {this.state.store.folders}/>
+        <NoteList notes= {this.state.store.notes}/>        
+
+        </div>
+      
+      
+      </div>
+    );
+
+  }
+   
+  
+  
 }
 
 export default App;
