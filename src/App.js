@@ -19,7 +19,7 @@ class App extends React.Component{
  
   render() {
     return (
-      <div className="App">
+      <div className="App">        
         <Header />
         <div className="flex-container">
         <Sidebar folders= {this.state.store.folders}/>
