@@ -7,12 +7,10 @@ function Sidebar (props) {
       <AddFolder
         key={folder.id}
         keyfolder={folder.id}
-        name={folder.name}
-       
+        name={folder.name}       
       />
     );
   });
-
  
   return (
     <ul>
