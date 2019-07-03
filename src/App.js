@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import "./App.css";
 import STORE from "./components/Store";
 import Sidebar from "./components/Sidebar";
-import AddNote from "./components/AddNote"
+
 
 import NoteList from "./components/NoteList"
 
@@ -34,17 +34,18 @@ class App extends React.Component {
             render={(routeProps) => {
               console.log(routeProps);
               const filterNotes = this.state.store.notes.filter(note => note.folderId === routeProps.match.params.folderId);
-              return <NoteList notes={filterNotes} />
+              return <NoteList  notes={filterNotes} />
             }}
             />
             <Route
               exact
               path="/note/:noteId"
               render={(routeProps) => {
-                console.log(routeProps)
-                const findNote = this.state.store.notes.find(note => note.id === routeProps.match.params.noteId);
+                console.log(routeProps.match.params.noteId)
+                const filterNotes = this.state.store.notes.filter(note => note.id === routeProps.match.params.noteId);
+                console.log(filterNotes)
 
-                return <NoteList notes={findNote}    />
+                return <NoteList notes={filterNotes}  />
 
               }}
               />

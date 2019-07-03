@@ -1,14 +1,16 @@
 import React from "react";
-import AddNote from "./AddNote";
+import Note from "./Note";
+
 
 
 function NoteList(props) {
+  
   let noteList = props.notes.map(note => {
     return (
-      // <NavLink to={`/note/${note.id}`} content= {note.content} key={note.id}>{note.name} {note.modified}</NavLink>
-      <AddNote
+      
+      <Note
         key={note.id}
-        keyNote={note.id}
+        id={note.id}
         name={note.name}
         modified={note.modified}
         content={note.content}

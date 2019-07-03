@@ -1,14 +1,14 @@
-import React from 'react';
+// import React from 'react';
 
-function AddFolder (props) {
-  return (
-    <li key= {props.keyFolder}>
-      <h2>{props.name}</h2>
+// function AddFolder (props) {
+//   return (
+//     <li key= {props.keyFolder}>
+//       <h2>{props.name}</h2>
        
      
-    </li>
+//     </li>
 
-  )
-}
+//   )
+// }
 
-export default AddFolder;
+// export default AddFolder;
